@@ -1,0 +1,68 @@
+.navbar-container {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.weather-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+    overflow-y: auto;
+}
+
+.weather-card {
+    width: 90%;
+    max-width: 700px;
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: background 0.8s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .weather-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .weather-card h1 {
+        font-size: 2.2rem;
+    }
+
+    .weather-card {
+        padding: 1rem;
+    }
+}
